@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.12/20035
 // Filename: skin_with_FloorPlan_and_Logo??9.ggsk
-// Generated 2024-05-27T17:23:38
+// Generated 2024-05-27T19:14:11
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnail_menu', 2, false, { ignoreInState: 1  });
@@ -5255,6 +5255,31 @@ function pano2vrSkin(player,base) {
 		el.ggElementNodeId=function() {
 			return player.getCurrentNode();
 		}
+		me._image_1_1.logicBlock_position = function() {
+			var newLogicStatePosition;
+			if (
+				((player.getViewerSize().width <= 329))
+			)
+			{
+				newLogicStatePosition = 0;
+			}
+			else {
+				newLogicStatePosition = -1;
+			}
+			if (me._image_1_1.ggCurrentLogicStatePosition != newLogicStatePosition) {
+				me._image_1_1.ggCurrentLogicStatePosition = newLogicStatePosition;
+				me._image_1_1.style.transition='left 0s, bottom 0s, width 0s, height 0s';
+				if (me._image_1_1.ggCurrentLogicStatePosition == 0) {
+					me._image_1_1.style.left='20px';
+					me._image_1_1.style.bottom='60px';
+				}
+				else {
+					me._image_1_1.style.left='20px';
+					me._image_1_1.style.bottom='20px';
+				}
+			}
+		}
+		me._image_1_1.logicBlock_position();
 		me._image_1_1.logicBlock_size = function() {
 			var newLogicStateSize;
 			if (
@@ -5268,7 +5293,7 @@ function pano2vrSkin(player,base) {
 			}
 			if (me._image_1_1.ggCurrentLogicStateSize != newLogicStateSize) {
 				me._image_1_1.ggCurrentLogicStateSize = newLogicStateSize;
-				me._image_1_1.style.transition='width 0s, height 0s';
+				me._image_1_1.style.transition='left 0s, bottom 0s, width 0s, height 0s';
 				if (me._image_1_1.ggCurrentLogicStateSize == 0) {
 					me._image_1_1.style.width='40px';
 					me._image_1_1.style.height='40px';
@@ -7590,6 +7615,7 @@ function pano2vrSkin(player,base) {
 		me._tt_unmute.logicBlock_visible();
 		me._tt_mute.logicBlock_position();
 		me._tt_mute.logicBlock_visible();
+		me._image_1_1.logicBlock_position();
 		me._image_1_1.logicBlock_size();
 		me._booking.logicBlock_visible();
 		me._map_screentint.logicBlock_visible();
@@ -8265,6 +8291,7 @@ function pano2vrSkin(player,base) {
 			me._room_descrip.logicBlock_position();
 			me._map_1.logicBlock_visible();
 			me._room_description_setup.logicBlock_position();
+			me._image_1_1.logicBlock_position();
 			me._image_1_1.logicBlock_size();
 			me._gallery.logicBlock_scaling();
 			me._image_popup.logicBlock_scaling();
