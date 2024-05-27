@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 7.0.12/20035
 // Filename: skin_with_FloorPlan_and_Logo??9.ggsk
-// Generated 2024-05-27T19:14:11
+// Generated 2024-05-27T20:31:07
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_thumbnail_menu', 2, false, { ignoreInState: 1  });
@@ -5270,8 +5270,8 @@ function pano2vrSkin(player,base) {
 				me._image_1_1.ggCurrentLogicStatePosition = newLogicStatePosition;
 				me._image_1_1.style.transition='left 0s, bottom 0s, width 0s, height 0s';
 				if (me._image_1_1.ggCurrentLogicStatePosition == 0) {
-					me._image_1_1.style.left='20px';
-					me._image_1_1.style.bottom='60px';
+					me._image_1_1.style.left='15px';
+					me._image_1_1.style.bottom='70px';
 				}
 				else {
 					me._image_1_1.style.left='20px';
@@ -5283,7 +5283,7 @@ function pano2vrSkin(player,base) {
 		me._image_1_1.logicBlock_size = function() {
 			var newLogicStateSize;
 			if (
-				((player.getViewerSize().width < 640))
+				((player.getViewerSize().width <= 320))
 			)
 			{
 				newLogicStateSize = 0;
@@ -5295,8 +5295,8 @@ function pano2vrSkin(player,base) {
 				me._image_1_1.ggCurrentLogicStateSize = newLogicStateSize;
 				me._image_1_1.style.transition='left 0s, bottom 0s, width 0s, height 0s';
 				if (me._image_1_1.ggCurrentLogicStateSize == 0) {
-					me._image_1_1.style.width='40px';
-					me._image_1_1.style.height='40px';
+					me._image_1_1.style.width='50px';
+					me._image_1_1.style.height='25px';
 					skin.updateSize(me._image_1_1);
 				}
 				else {
